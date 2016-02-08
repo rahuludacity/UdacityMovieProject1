@@ -35,5 +35,4 @@ dependencies {
     compile 'info.movito:themoviedbapi:1.1'
     compile 'com.mcxiaoke.volley:library-aar:1.0.0'
     compile 'com.google.api.client:google-api-data-youtube-v2:1.0.10-alpha'
-    compile files('libs/YouTubeAndroidPlayerApi.jar')
 }
