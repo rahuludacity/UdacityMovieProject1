@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/fab_margin">
+
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/posterImageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:id="@+id/titleHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/posterImageView"
+        android:paddingBottom="@dimen/eightdp"
+        android:paddingTop="@dimen/eightdp"
+        android:text="@string/title"
+        android:textAppearance="@style/HeadingText" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/titleHeading"
+        android:layout_below="@+id/posterImageView"
+        android:layout_toRightOf="@+id/titleHeading"
+        android:paddingLeft="@dimen/eightdp"
+        android:textAppearance="@style/subText" />
+
+<RelativeLayout
+    android:id="@+id/plotLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/titleHeading">
+    <TextView
+        android:id="@+id/plotHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:paddingBottom="@dimen/eightdp"
+        android:text="@string/overview"
+        android:textAppearance="@style/HeadingText" />
+
+    <TextView
+        android:id="@+id/plot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/plotHeading"
+        android:layout_toRightOf="@+id/plotHeading"
+        android:paddingLeft="@dimen/eightdp"
+        android:textAppearance="@style/subText" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/ratingHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/plotLayout"
+        android:paddingBottom="@dimen/eightdp"
+        android:text="@string/rating"
+        android:textAppearance="@style/HeadingText" />
+
+    <TextView
+        android:id="@+id/rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ratingHeading"
+        android:layout_below="@+id/plotLayout"
+        android:layout_toRightOf="@+id/ratingHeading"
+        android:paddingLeft="@dimen/eightdp"
+        android:textAppearance="@style/subText" />
+
+
+    <TextView
+        android:id="@+id/releaseDateHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ratingHeading"
+        android:paddingBottom="@dimen/eightdp"
+        android:text="@string/releaseDate"
+        android:textAppearance="@style/HeadingText" />
+
+    <TextView
+        android:id="@+id/releaseDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/releaseDateHeading"
+        android:layout_below="@+id/ratingHeading"
+        android:layout_toRightOf="@+id/releaseDateHeading"
+        android:paddingLeft="@dimen/eightdp"
+        android:textAppearance="@style/subText" />
+
+
+</RelativeLayout>

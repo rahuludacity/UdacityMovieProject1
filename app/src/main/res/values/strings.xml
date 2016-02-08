@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">UdacityMovieProject1</string>
+    <string name="action_settings">Settings</string>
+    <string name="api_key">358f0be70562c14841f3e959bf500b92</string>
+    <string name="title">Title :</string>
+    <string name="overview">Overview :</string>
+    <string name="rating">Rating :</string>
+    <string name="releaseDate">Release Date :</string>
+    <string name="sortByPopularity">Sort By Popularity</string>
+    <string name="sortByRating">Sort By Rating</string>
+</resources>

@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.appin.udacitymovieproject1.MainActivity">
+    <item
+        android:id="@+id/sort_by_popularity"
+        android:orderInCategory="100"
+        android:title="@string/sortByPopularity"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/sort_by_rating"
+        android:orderInCategory="100"
+        android:title="@string/sortByRating"
+        app:showAsAction="never" />
+</menu>
