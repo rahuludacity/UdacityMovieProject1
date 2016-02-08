@@ -31,28 +31,29 @@
         android:paddingLeft="@dimen/eightdp"
         android:textAppearance="@style/subText" />
 
-<RelativeLayout
-    android:id="@+id/plotLayout"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_below="@+id/titleHeading">
-    <TextView
-        android:id="@+id/plotHeading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:paddingBottom="@dimen/eightdp"
-        android:text="@string/overview"
-        android:textAppearance="@style/HeadingText" />
-
-    <TextView
-        android:id="@+id/plot"
+    <RelativeLayout
+        android:id="@+id/plotLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/plotHeading"
-        android:layout_toRightOf="@+id/plotHeading"
-        android:paddingLeft="@dimen/eightdp"
-        android:textAppearance="@style/subText" />
+        android:layout_below="@+id/titleHeading">
+
+        <TextView
+            android:id="@+id/plotHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:paddingBottom="@dimen/eightdp"
+            android:text="@string/overview"
+            android:textAppearance="@style/HeadingText" />
+
+        <TextView
+            android:id="@+id/plot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/plotHeading"
+            android:layout_toRightOf="@+id/plotHeading"
+            android:paddingLeft="@dimen/eightdp"
+            android:textAppearance="@style/subText" />
     </RelativeLayout>
 
 

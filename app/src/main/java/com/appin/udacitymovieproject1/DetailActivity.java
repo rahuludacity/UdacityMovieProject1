@@ -4,7 +4,7 @@ package com.appin.udacitymovieproject1;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
-public class DetailActivity  extends AppCompatActivity{
+public class DetailActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

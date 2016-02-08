@@ -6,14 +6,14 @@ import info.movito.themoviedbapi.model.MovieDb;
 public class MySingelton {
 
     private static MySingelton instance = null;
-    private MovieDb movieDb ;
+    private MovieDb movieDb;
 
-    private MySingelton(){
+    private MySingelton() {
 
     }
 
-    public synchronized static MySingelton getInstance(){
-        if(instance == null){
+    public synchronized static MySingelton getInstance() {
+        if (instance == null) {
             instance = new MySingelton();
             return instance;
         }

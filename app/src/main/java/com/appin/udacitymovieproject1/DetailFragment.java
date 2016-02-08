@@ -18,17 +18,17 @@ import com.android.volley.toolbox.Volley;
 
 import info.movito.themoviedbapi.model.MovieDb;
 
-public class DetailFragment extends Fragment{
+public class DetailFragment extends Fragment {
 
-    private  RequestQueue mRequestQueue;
-    private  ImageLoader mImageLoader;
+    private RequestQueue mRequestQueue;
+    private ImageLoader mImageLoader;
 
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-         super.onCreateView(inflater, container, savedInstanceState);
-        return inflater.inflate(R.layout.detail_fragment,container,false);
+        super.onCreateView(inflater, container, savedInstanceState);
+        return inflater.inflate(R.layout.detail_fragment, container, false);
     }
 
     @Override
@@ -53,7 +53,7 @@ public class DetailFragment extends Fragment{
         TextView releasedate = (TextView) view.findViewById(R.id.releaseDate);
         TextView rating = (TextView) view.findViewById(R.id.rating);
 
-        imageView.setImageUrl("http://image.tmdb.org/t/p/w500"+ getMovieDb().getBackdropPath(),mImageLoader);
+        imageView.setImageUrl("http://image.tmdb.org/t/p/w500" + getMovieDb().getBackdropPath(), mImageLoader);
         title.setText(getMovieDb().getOriginalTitle());
         plot.setText(getMovieDb().getOverview());
         releasedate.setText(getMovieDb().getReleaseDate());

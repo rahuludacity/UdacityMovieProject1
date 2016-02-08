@@ -11,7 +11,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.util.LruCache;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,14 +50,11 @@ public class MainFragment extends Fragment implements Constants {
         new MoviesAsyncTask().execute(MOST_POPULAR);
         recyclerView = (RecyclerView) view.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 3));
-
-       // int spacing = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 2, getResources().getDisplayMetrics());
-        recyclerView.addItemDecoration(new SpacingDecoration());
         recyclerView.setHasFixedSize(true);
-       // recyclerView.setPadding(spacing, spacing, spacing, spacing);
+
     }
 
-    protected void sortList(String value){
+    protected void sortList(String value) {
         new MoviesAsyncTask().execute(value);
     }
 
@@ -83,10 +79,10 @@ public class MainFragment extends Fragment implements Constants {
         @Override
         protected List<MovieDb> doInBackground(String... params) {
             TmdbMovies movies = new TmdbApi(getString(R.string.api_key)).getMovies();
-          if(MOST_RATED.equals(params[0])) {
-              MovieResultsPage movie = movies.getTopRatedMovies("en", 10);
-              return movie.getResults();
-          }
+            if (MOST_RATED.equals(params[0])) {
+                MovieResultsPage movie = movies.getTopRatedMovies("en", 10);
+                return movie.getResults();
+            }
             MovieResultsPage movie = movies.getPopularMovieList("en", 10);
             return movie.getResults();
         }
@@ -94,13 +90,13 @@ public class MainFragment extends Fragment implements Constants {
         @Override
         protected void onPostExecute(List<MovieDb> moviesList) {
             super.onPostExecute(moviesList);
-            if(pd.isShowing()) {
+            if (pd.isShowing()) {
                 pd.dismiss();
             }
-            if(moviesList != null && !moviesList.isEmpty()) {
+            if (moviesList != null && !moviesList.isEmpty()) {
                 recyclerView.setAdapter(new MoviesGridAdater(moviesList));
-            }else{
-                Toast.makeText(getActivity(),"We are unable to get the information Currently",Toast.LENGTH_LONG).show();
+            } else {
+                Toast.makeText(getActivity(), "We are unable to get the information Currently", Toast.LENGTH_LONG).show();
             }
         }
     }
